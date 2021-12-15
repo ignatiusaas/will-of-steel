@@ -54,12 +54,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Enemy\Waypoints.cs" />
+    <Compile Include="Assets\Towers\BuildManager.cs" />
     <Compile Include="Assets\Towers\Bullet.cs" />
     <Compile Include="Assets\Enemy\WaveSpawner.cs" />
     <Compile Include="Assets\Enemy\Enemy.cs" />
-    <Compile Include="Assets\Towers\Tower1.cs" />
     <Compile Include="Assets\Towers\BuildSpot.cs" />
-    <Compile Include="Assets\Towers\BuildManager.cs" />
+    <Compile Include="Assets\Towers\Tower1.cs" />
+    <Compile Include="Assets\Workshop\Workshop.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

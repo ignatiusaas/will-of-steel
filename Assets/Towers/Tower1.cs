@@ -45,7 +45,7 @@ public class Tower1 : MonoBehaviour
     void Locate()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
-        float shortestDis = 20f;
+        float shortestDis = 80f;
         GameObject nearestTarget = null;
 
         foreach (GameObject enemy in enemies)

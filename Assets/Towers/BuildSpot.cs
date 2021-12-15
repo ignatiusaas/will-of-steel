@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class BuildSpot : MonoBehaviour
 {
@@ -9,8 +10,15 @@ public class BuildSpot : MonoBehaviour
     private SpriteRenderer rend;
     private GameObject tower;
 
+    BuildManager buildManager;
+
     void OnMouseEnter()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+
+        if (buildManager.GetTower() == null)
+            return;
         if (tower != null)
             return;
         rend.color = hoverColor;
@@ -25,11 +33,16 @@ public class BuildSpot : MonoBehaviour
 
     void OnMouseDown()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+
+        if (buildManager.GetTower() == null)
+            return;
+
         if (tower != null)
         {
             Destroy(tower);
             tower = null;
-            //Debug.Log("Soon");
             rend.color = originColor;
             return;
         }
@@ -43,6 +56,8 @@ public class BuildSpot : MonoBehaviour
     {
         rend = GetComponent<SpriteRenderer>();
         originColor = rend.color;
+
+        buildManager = BuildManager.instance;
     }
 
     // Update is called once per frame
