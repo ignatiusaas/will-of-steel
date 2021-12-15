@@ -57,12 +57,13 @@
     <Compile Include="Assets\Towers\Scripts\BuildManager.cs" />
     <Compile Include="Assets\Workshop\Workshop.cs" />
     <Compile Include="Assets\Towers\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Workshop\Stats.cs" />
     <Compile Include="Assets\Enemy\Scripts\WaveSpawner.cs" />
+    <Compile Include="Assets\Towers\Scripts\TowerPrint.cs" />
     <Compile Include="Assets\Enemy\Scripts\Enemy.cs" />
     <Compile Include="Assets\Towers\Scripts\BuildSpot.cs" />
     <Compile Include="Assets\Towers\Scripts\Tower1.cs" />
-    <Compile Include="Assets\Towers\Scripts\TowerPrint.cs" />
-    <Compile Include="Assets\Workshop\Stats.cs" />
+    <Compile Include="Assets\Environment\UI.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

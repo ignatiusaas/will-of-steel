@@ -17,6 +17,12 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Stats.Lives <= 0)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         Vector2 dir = target.position - transform.position;
         transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
 
@@ -31,6 +37,7 @@ public class Enemy : MonoBehaviour
         if(wpI >= Waypoints.wp.Length - 1)
         {
             Destroy(gameObject);
+            Stats.Lives -= 2;
             return;
         }
 

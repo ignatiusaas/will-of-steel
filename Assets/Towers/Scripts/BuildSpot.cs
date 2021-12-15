@@ -17,7 +17,7 @@ public class BuildSpot : MonoBehaviour
         if (EventSystem.current.IsPointerOverGameObject())
             return;
 
-        if (!buildManager.CanBuild)
+        if (!buildManager.CanBuild || !buildManager.EnergyCheck)
             return;
         if (tower != null)
             return;
@@ -36,7 +36,7 @@ public class BuildSpot : MonoBehaviour
         if (EventSystem.current.IsPointerOverGameObject())
             return;
 
-        if (!buildManager.CanBuild)
+        if (!buildManager.CanBuild || !buildManager.EnergyCheck)
             return;
 
         if (tower != null)

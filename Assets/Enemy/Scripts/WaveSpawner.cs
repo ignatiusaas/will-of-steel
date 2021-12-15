@@ -9,17 +9,26 @@ public class WaveSpawner : MonoBehaviour
 
     public float waveDelay = 3f;
     public float spawnDelay = 0.5f;
-    private float countdown = 3f;
-    private int waveI = 0;
+    public static float countdown;
+    private float startCountdown = 3f;
+    public static int waveI;
+    public int startWaveI = 0;
     // Start is called before the first frame update
     void Start()
     {
-        
+        waveI = startWaveI;
+        countdown = startCountdown;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(Stats.Lives <= 0)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         if (countdown <= 0f)
         {
             StartCoroutine(SpawnWave());

@@ -9,6 +9,7 @@ public class BuildManager : MonoBehaviour
     private TowerPrint towerT;
 
     public bool CanBuild { get { return towerT != null; } }
+    public bool EnergyCheck { get { return Stats.Energy >= towerT.cost; } }
 
     public void MainSelectTower(TowerPrint towerPrint)
     {
@@ -17,7 +18,7 @@ public class BuildManager : MonoBehaviour
 
     public void BuildTower(BuildSpot spot)
     {
-        if(Stats.Energy < towerT.cost)
+        if(!EnergyCheck)
         {
             return;
         }
