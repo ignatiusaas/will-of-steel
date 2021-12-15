@@ -53,14 +53,16 @@
     <UnityVersion>2020.3.22f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Enemy\Waypoints.cs" />
-    <Compile Include="Assets\Towers\BuildManager.cs" />
-    <Compile Include="Assets\Towers\Bullet.cs" />
-    <Compile Include="Assets\Enemy\WaveSpawner.cs" />
-    <Compile Include="Assets\Enemy\Enemy.cs" />
-    <Compile Include="Assets\Towers\BuildSpot.cs" />
-    <Compile Include="Assets\Towers\Tower1.cs" />
+    <Compile Include="Assets\Enemy\Scripts\Waypoints.cs" />
+    <Compile Include="Assets\Towers\Scripts\BuildManager.cs" />
     <Compile Include="Assets\Workshop\Workshop.cs" />
+    <Compile Include="Assets\Towers\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Enemy\Scripts\WaveSpawner.cs" />
+    <Compile Include="Assets\Enemy\Scripts\Enemy.cs" />
+    <Compile Include="Assets\Towers\Scripts\BuildSpot.cs" />
+    <Compile Include="Assets\Towers\Scripts\Tower1.cs" />
+    <Compile Include="Assets\Towers\Scripts\TowerPrint.cs" />
+    <Compile Include="Assets\Workshop\Stats.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

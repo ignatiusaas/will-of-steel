@@ -5,10 +5,11 @@ using UnityEngine;
 public class Workshop : MonoBehaviour
 {
     BuildManager buildManager;
+    public TowerPrint tower1;
 
-    public void BuildTower1()
+    public void SelectTower1()
     {
-        buildManager.MainBuildTower(buildManager.tower1Prefab);
+        buildManager.MainSelectTower(tower1);
     }
     // Start is called before the first frame update
     void Start()
