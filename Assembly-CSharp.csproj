@@ -64,6 +64,7 @@
     <Compile Include="Assets\Towers\Scripts\BuildSpot.cs" />
     <Compile Include="Assets\Towers\Scripts\Tower1.cs" />
     <Compile Include="Assets\Environment\UI.cs" />
+    <Compile Include="Assets\Environment\Exit.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
